@@ -5,10 +5,10 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
 
-define('DATABASE', 'sd686');
-define('USERNAME', 'sd686');
-define('PASSWORD', 'ZOm1EN5l3');
-define('CONNECTION', 'sql1.njit.edu');
+define('DATABASE', 'sgd23');
+define('USERNAME', 'sgd23');
+define('PASSWORD', 'xr6n491i');
+define('CONNECTION', 'sql2.njit.edu');
 
 //Autoloader class
 class Manage {
