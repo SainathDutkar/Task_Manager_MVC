@@ -20,7 +20,6 @@
 
 <form action="index.php?page=tasks&action=addtask" method="POST">
     Owner email: <input type="text" name="owneremail"><br>
-    Owner id: <input type="text" name="ownerid"><br>
     Created date: <input type="text" name="cdate"><br>
     due date: <input type="text" name="ddate"><br>
     message: <input type="text" name="message"><br>

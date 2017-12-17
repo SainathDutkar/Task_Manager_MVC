@@ -22,8 +22,9 @@ class tasksController extends http\controller
 
     public static function all()
     {
-        $records = todos::findAll();
-        /*session_start();
+       // $userID = $_SESSION["userID"];
+       // $records = todos::findAllById($userID);
+        session_start();
            if(key_exists('userID',$_SESSION)) {
                $userID = $_SESSION['userID'];
            } else {
@@ -32,8 +33,8 @@ class tasksController extends http\controller
            }
         $userID = $_SESSION['userID'];
 
-        $records = todos::findTasksbyID($userID);
-        */
+        $records = todos::findAllById($userID);
+
         self::getTemplate('all_tasks', $records);
 
     }
@@ -49,11 +50,19 @@ class tasksController extends http\controller
 
     public static function addTask()
     {
+        session_start();
+        if(key_exists('userID',$_SESSION)) {
+            $userID = $_SESSION['userID'];
+        } else {
+
+            echo 'you must be logged in to view tasks';
+        }
+        $userID = $_SESSION['userID'];
        // self::getTemplate('addTask');
         echo 'inside addtask';
         $record = new todo();
         $record->owneremail=$_POST['owneremail'];
-        $record->ownerid=$_POST['ownerid'];
+        $record->ownerid=$userID;
         $record->createddate=$_POST['cdate'];
         $record->duedate=$_POST['ddate'];
         $record->message=$_POST['message'];
