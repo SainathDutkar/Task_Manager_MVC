@@ -96,7 +96,7 @@ class routes
         $route->action = 'addtask';
         $route->page = 'tasks';
         $route->controller = 'tasksController';
-        $route->method = 'addTask';
+        $route->method = 'update';
         $routes[] = $route;
 
         //This goes in the login form action method
@@ -120,6 +120,15 @@ class routes
         $route->controller = 'tasksController';
         $route->method = 'delete';
         $routes[] = $route;
+
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'edit';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'edit';
+        $routes[] = $route;
+
 
 
         $route = new route();
@@ -154,6 +163,16 @@ class routes
         $route->method = 'register';
         $routes[] = $route;
         //this handles the reg post to create the user
+
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'registerUser';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'register';
+        $routes[] = $route;
+
+
         $route = new route();
         $route->http_method = 'POST';
         $route->action = 'register';
