@@ -58,8 +58,6 @@ final class account extends \database\model
             $valid = FALSE;
             echo 'nothing in email';
         }
-
-
         return $valid;
 
     }

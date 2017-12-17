@@ -122,13 +122,12 @@ class accountsController extends http\controller
 
 
         if ($user == FALSE) {
+            print_r("<h1>'User not found'</h1>");
             echo 'user not found';
         } else {
 
             if($user->checkPassword($_POST['password']) == TRUE) {
-
                 echo 'login';
-
                 session_start();
                 $_SESSION["userID"] = $user->id;
 
@@ -144,6 +143,12 @@ class accountsController extends http\controller
 
 
 
+    }
+
+    public static function logout()
+    {
+        session_destroy();
+        header('Location: index.php');
     }
 
 }
