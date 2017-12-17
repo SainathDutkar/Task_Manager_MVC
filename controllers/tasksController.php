@@ -70,7 +70,8 @@ class tasksController extends http\controller
         $record->save();
 
         echo "done";
-        self::getTemplate('index.php?page=tasks&action=all');
+        header('Location: index.php?page=tasks&action=all');
+        //self::getTemplate('index.php?page=tasks&action=all');
 
     }
 
@@ -85,7 +86,7 @@ class tasksController extends http\controller
         }
         $userID = $_SESSION['userID'];
         // self::getTemplate('addTask');
-        echo 'inside addtask';
+
         $records = todos::findOne($_REQUEST['id']);
         $record = new todo();
         $record->id=$records->id;;

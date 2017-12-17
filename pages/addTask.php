@@ -18,11 +18,11 @@
 <body>
 
 
-<form action="index.php?page=tasks&action=addtask" method="POST">
-    Owner email: <input type="text" name="owneremail"><br>
-    Created date: <input type="text" name="cdate"><br>
-    due date: <input type="text" name="ddate"><br>
-    message: <input type="text" name="message"><br>
+<form name="updateTask" action="index.php?page=tasks&action=addtask" onsubmit="return validateForm()" method="POST">
+    Owner email: <input type="text" name="owneremail" required><br>
+    Created date: <input type="text" name="cdate" required><br>
+    due date: <input type="text" name="ddate" required><br>
+    message: <input type="text" name="message" required><br>
     isdone: <input type="text" name="isdone"><br>
     <button type="submit">Add Task</button>
 </form>
@@ -31,5 +31,38 @@
 
     
 <script src="js/scripts.js"></script>
+<script>
+    function validateForm() {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var email = document.forms["updateTask"]["owneremail"].value;
+        var isdone = document.forms["updateTask"]["isdone"].value;
+        var temp;
+        // alert(isdone);
+        var alertmessage = "";
+
+
+        if (email == "")
+        {
+            alertmessage = alertmessage + "Please enter the Email address  ,";
+        }
+        if (!email.match(mailformat) && email != "")
+        {
+            alertmessage = alertmessage + "Email address is not Valid ,";
+        }
+        if (isdone == "1" || isdone == "0"){temp = true}
+
+        if(!temp){
+            alertmessage = alertmessage + "Please enter BINARY value 0/1 for IS DONE.";
+        }
+
+        if (alertmessage != "")
+        {
+            alert(alertmessage);
+            return false;
+        }
+
+    }
+</script>
+
 </body>
 </html>

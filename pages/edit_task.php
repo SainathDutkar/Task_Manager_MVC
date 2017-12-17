@@ -18,7 +18,7 @@
 <body>
 
 
-<form name="updateTask" action="index.php?page=tasks&action=addtask&id=<?php echo $data->id; ?>" onsubmit="return validateForm()" method="POST">
+<form name="updateTask" action="index.php?page=tasks&action=updatetask&id=<?php echo $data->id; ?>" onsubmit="return validateForm()" method="POST">
     Owner email: <input type="text" name="owneremail" value="<?php echo $data->owneremail;?>"><br>
     Owner id: <input type="text" name="ownerid" value="<?php echo $data->ownerid;?>" readonly><br>
     Created date: <input type="text" name="cdate" value="<?php echo $data->createddate;?>" readonly><br>

@@ -93,10 +93,18 @@ class routes
 
         $route = new route();
         $route->http_method = 'POST';
-        $route->action = 'addtask';
+        $route->action = 'updatetask';
         $route->page = 'tasks';
         $route->controller = 'tasksController';
         $route->method = 'update';
+        $routes[] = $route;
+
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'addtask';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'addTask';
         $routes[] = $route;
 
         //This goes in the login form action method

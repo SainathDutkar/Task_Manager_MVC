@@ -26,7 +26,7 @@ print utility\htmlTable::genarateTableFromMultiArray($data);
 ?>
 
 <h1><a href="index.php?page=accounts&action=show">View my profile </a></h1>
-<h1><a href="index.php?page=tasks&action=create">AdTaskd </a></h1>
+<h1><a href="index.php?page=tasks&action=create">Add Task </a></h1>
 
 <script src="js/scripts.js"></script>
 </body>
