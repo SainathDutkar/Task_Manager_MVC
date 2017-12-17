@@ -56,35 +56,26 @@
 
 <script>
     function validateForm() {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         var firstname = document.forms["accountDetail"]["fname"].value;
         var lastName = document.forms["accountDetail"]["lname"].value;
         var email = document.forms["accountDetail"]["email"].value;
-        var phone = document.forms["accountDetail"]["phone"].value;
-        var gender = document.forms["accountDetail"]["gender"].value;
+      //  var phone = document.forms["accountDetail"]["phone"].value;
+       // var gender = document.forms["accountDetail"]["gender"].value;
         var alertmessage = "";
-        if (firstname == "")
+        if (firstname =="")
         {
-            alertmessage = alertmessage + "Please fill the first Name  ,";
+            alertmessage = alertmessage + "At least 1 character needed for First Name ,";
            // alert(alertmessage);
            // return false;
         }
         if (lastName == "")
         {
-            alertmessage = alertmessage + "Please fill the Last Name  ,";
+            alertmessage = alertmessage + "At least 1 character needed for Last Name ,";
         }
-        if (email == "")
+        if (!email.match(mailformat))
         {
-            alertmessage = alertmessage + "Please fill the email address  ,";
-        }
-        if (phone == "")
-        {
-            alertmessage = alertmessage + "Please fill the phone number  ,";
-
-        }
-        if (gender == "")
-        {
-            alertmessage = alertmessage + "Please fill the gender  ,";
-
+            alertmessage = alertmessage + "Email address is not Valid.";
         }
 
         if (alertmessage != "")
