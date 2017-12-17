@@ -15,7 +15,15 @@ class accountsController extends http\controller
     //to call the show function the url is index.php?page=task&action=show
     public static function show()
     {
-        $record = accounts::findOne($_REQUEST['id']);
+        session_start();
+        if(key_exists('userID',$_SESSION)) {
+            $userID = $_SESSION['userID'];
+        } else {
+
+            echo 'you must be logged in to view tasks';
+        }
+        $userID = $_SESSION['userID'];
+        $record = accounts::findOne($userID);
         self::getTemplate('show_account', $record);
     }
 
