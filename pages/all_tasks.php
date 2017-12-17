@@ -20,8 +20,14 @@
 <?php
 //this is how you print something
 
+$arr = (array)$data;
+if (empty($arr)) {
+    echo "You have no task on your ID, Please create by clicking ADD TASK";
+}
+else
+{
 print utility\htmlTable::genarateTableFromMultiArray($data);
-
+}
 
 ?>
 
