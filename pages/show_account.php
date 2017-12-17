@@ -20,17 +20,17 @@
 <h1>Email: <?php echo $data->email; ?></h1>
 <h1>First Name: <?php echo $data->fname; ?></h1>
 <h1>Last Name: <?php echo $data->lname; ?></h1>
-!>
+-->
 
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
 
-print_r($data);
+//print_r($data);
 
 
 ?>
 
-<form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
+<form name="accountDetail" action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" onsubmit="return validateForm()" method="post">
 
     First name: <input type="text" name="fname" value="<?php echo $data->fname; ?>"><br>
 
@@ -39,15 +39,61 @@ print_r($data);
     Phone: <input type="text" name="phone" value="<?php echo $data->phone; ?>"><br>
     Birthday: <input type="text" name="birthday" value="<?php echo $data->birthday; ?>"><br>
     Gender: <input type="text" name="gender" value="<?php echo $data->gender; ?>"><br>
-    <input type="submit" value="Submit form">
+    <input type="submit" value="SAVE">
 </form>
 
 
-<form action="index.php?page=accounts&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
+<form action="index.php?page=accounts&action=logout" method="post">
+    <button type="submit">Logout</button>
+</form>
+
+<!--<form action="index.php?page=accounts&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>
-
+-->
 
 <script src="js/scripts.js"></script>
+
+<script>
+    function validateForm() {
+        var firstname = document.forms["accountDetail"]["fname"].value;
+        var lastName = document.forms["accountDetail"]["lname"].value;
+        var email = document.forms["accountDetail"]["email"].value;
+        var phone = document.forms["accountDetail"]["phone"].value;
+        var gender = document.forms["accountDetail"]["gender"].value;
+        var alertmessage = "";
+        if (firstname == "")
+        {
+            alertmessage = alertmessage + "Please fill the first Name  ,";
+           // alert(alertmessage);
+           // return false;
+        }
+        if (lastName == "")
+        {
+            alertmessage = alertmessage + "Please fill the Last Name  ,";
+        }
+        if (email == "")
+        {
+            alertmessage = alertmessage + "Please fill the email address  ,";
+        }
+        if (phone == "")
+        {
+            alertmessage = alertmessage + "Please fill the phone number  ,";
+
+        }
+        if (gender == "")
+        {
+            alertmessage = alertmessage + "Please fill the gender  ,";
+
+        }
+
+        if (alertmessage != "")
+        {
+             alert(alertmessage);
+             return false;
+        }
+
+}
+</script>
 </body>
 </html>
