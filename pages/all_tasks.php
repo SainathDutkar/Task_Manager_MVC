@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styleSheet.css">
-    <title>WSD MVC PROJECT</title>
+    <title>WSD FINAL PROJECT</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 

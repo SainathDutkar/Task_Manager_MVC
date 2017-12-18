@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>The HTML5 Herald</title>
+    <title>WSD FINAL PROJECT</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
     <link rel="stylesheet" href="styleSheet.css">
@@ -27,7 +27,7 @@
     Phone: <input type="text" name="phone"><br>
     Birthday: <input type="text" name="birthday"><br>
     Gender: <input type="text" name="gender"><br>
-    Password: <input type="password" name="password" minlength="6"><br>
+    Password: <input type="password" name="password" required><br>
     <input type="submit" value="Register User" class="btn btn-primary btn-block btn-large">
 </form>
 </div>
@@ -50,11 +50,11 @@
         if (lastName == "")
         {
             alertmessage = alertmessage + "At least 1 character needed for Last Name ,";
-        }
-        if (password < "6")
+        }*/
+        if (password.length < 6)
         {
             alertmessage = alertmessage + "Password must be at least 6 character long ,";
-        } */
+        }
         if (email == "")
         {
             alertmessage = alertmessage + "Please enter the Email address";
