@@ -31,10 +31,10 @@
 <form action="index.php?page=accounts&action=login" method="POST">
 
    <!-- <div class="container"> -->
-        <label><b>Username</b></label>
+        <h1>LOGIN</h1>
         <input type="text" placeholder="Enter Username" name="email" required>
 
-        <label><b>Password</b></label>
+
         <input type="password" placeholder="Enter Password" name="password" required>
 
     <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
@@ -42,6 +42,7 @@
   </form>
 
     <form action="index.php?page=accounts&action=registerUser" method="post">
+        <h1>New User ?</h1>
         <button type="submit" class="btn btn-primary btn-block btn-large">Register</button>
     </form>
 </div>

@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<div class="login">
+
 <!--
 <h1>Email: <?php echo $data->email; ?></h1>
 <h1>First Name: <?php echo $data->fname; ?></h1>
@@ -31,11 +31,11 @@
 
 
 ?>
-
+<font color="white">
+<div class="login">
 <form name="accountDetail" action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" onsubmit="return validateForm()" method="post">
 
     First name: <input type="text" name="fname" value="<?php echo $data->fname; ?>" required><br>
-
     Last name: <input type="text" name="lname" value="<?php echo $data->lname; ?>" required><br>
     Email: <input type="text" name="email" value="<?php echo $data->email; ?>"><br>
     Phone: <input type="text" name="phone" value="<?php echo $data->phone; ?>"><br>
@@ -49,6 +49,7 @@
     <button type="submit" class="btn btn-primary btn-block btn-large">Logout</button>
 </form>
 </div>
+</font>
 <!--<form action="index.php?page=accounts&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>

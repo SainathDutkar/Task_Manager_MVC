@@ -46,6 +46,7 @@ print utility\htmlTable::generateTableFromOneRecord($data);
 
 ?>
 </center>
+<font color="white">
 <div class="login">
 <form action="index.php?page=accounts&action=edit&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete" class="btn btn-primary btn-block btn-large">Edit</button>
@@ -56,6 +57,7 @@ print utility\htmlTable::generateTableFromOneRecord($data);
 </form>
 
 </div>
+</font>
 <script src="js/scripts.js"></script>
 
 </body>

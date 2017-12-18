@@ -25,13 +25,13 @@
     Due date: <input type="text" name="ddate" required><br>
     Message: <input type="text" name="message" required><br>
     IS Done: <input type="text" name="isdone"><br>
-    <button type="submit" class="btn btn-primary btn-large">Add Task</button>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Add Task</button>
 </form>
-
+<br>
     <form action="index.php?page=accounts&action=logout" method="post">
         <button type="submit" class="btn btn-primary btn-block btn-large">Logout</button>
     </form>
-    <h1><a href="index.php?page=accounts&action=show" class="btn btn-primary btn-large">View my profile </a></h1>
+    <h1><a href="index.php?page=accounts&action=show" class="btn btn-primary btn-block btn-large">View my profile </a></h1>
 
 </div>
 </font>
