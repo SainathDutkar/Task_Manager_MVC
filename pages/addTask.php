@@ -28,6 +28,11 @@
     <button type="submit" class="btn btn-primary btn-large">Add Task</button>
 </form>
 
+    <form action="index.php?page=accounts&action=logout" method="post">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Logout</button>
+    </form>
+    <h1><a href="index.php?page=accounts&action=show" class="btn btn-primary btn-large">View my profile </a></h1>
+
 </div>
 </font>
     

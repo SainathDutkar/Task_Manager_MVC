@@ -27,6 +27,13 @@
     isdone: <input type="text" name="isdone" value="<?php echo $data->isdone;?>"><br>
     <input type="submit" value="UPDATE" class="btn btn-primary btn-block btn-large">
 </form>
+
+    <form action="index.php?page=accounts&action=logout" method="post">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Logout</button>
+    </form>
+    <h1><a href="index.php?page=accounts&action=show" class="btn btn-primary btn-large">View my profile </a></h1>
+
+
 </div>
 <script src="js/scripts.js"></script>
 <script>

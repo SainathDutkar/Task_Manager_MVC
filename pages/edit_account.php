@@ -41,12 +41,12 @@
     Phone: <input type="text" name="phone" value="<?php echo $data->phone; ?>"><br>
     Birthday: <input type="text" name="birthday" value="<?php echo $data->birthday; ?>"><br>
     Gender: <input type="text" name="gender" value="<?php echo $data->gender; ?>"><br>
-    <input type="submit" value="SAVE">
+    <input type="submit" value="SAVE" class="btn btn-primary btn-block btn-large">
 </form>
-
+<br>
 
 <form action="index.php?page=accounts&action=logout" method="post">
-    <button type="submit">Logout</button>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Logout</button>
 </form>
 </div>
 <!--<form action="index.php?page=accounts&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">

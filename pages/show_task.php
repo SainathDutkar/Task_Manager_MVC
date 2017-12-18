@@ -29,12 +29,19 @@ print utility\htmlTable::generateTableFromOneRecord($data);
 ?>
 
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
-    <button type="submit" form="form1" value="delete" class="btn btn-primary btn-block btn-large">Delete</button>
+    <button type="submit" form="form1" value="delete" class="btn btn-primary btn-block btn-large">Delete Task</button>
 </form>
     <br>
 <form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?> " method="post" id="form2">
-    <button type="submit" form="form2" value="delete" class="btn btn-primary btn-block btn-large">EDIT</button>
+    <button type="submit" form="form2" value="delete" class="btn btn-primary btn-block btn-large">Edit Task</button>
 </form>
+<br>
+        <h1><a href="index.php?page=accounts&action=show" class="btn btn-primary btn-block btn-large">My Profile </a></h1>
+<br>
+        <form action="index.php?page=accounts&action=logout" method="post">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Logout</button>
+        </form>
+
 </div>
 </font>
 

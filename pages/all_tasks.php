@@ -48,8 +48,11 @@ print utility\htmlTable::genarateTableFromMultiArray($data);
 ?>
 
 <h1><a href="index.php?page=accounts&action=show" class="btn btn-primary btn-large">View my profile </a></h1>
-<h1><a href="index.php?page=tasks&action=create" class="btn btn-primary btn-large">Add Task </a></h1>
-
+<div class="topright"><a href="index.php?page=tasks&action=create" class="btn btn-primary btn-large">Add Task </a></div>
+<br>
+<form action="index.php?page=accounts&action=logout" method="post">
+    <button type="submit" class="btn btn-primary btn-large">Logout</button>
+</form>
 <script src="js/scripts.js"></script>
 </body>
 </html>
