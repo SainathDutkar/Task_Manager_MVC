@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+<font color="white">
 <div class="login">
 <form name="updateTask" action="index.php?page=tasks&action=updatetask&id=<?php echo $data->id; ?>" onsubmit="return validateForm()" method="POST">
     Owner email: <input type="text" name="owneremail" value="<?php echo $data->owneremail;?>"><br>
@@ -27,7 +27,7 @@
     isdone: <input type="text" name="isdone" value="<?php echo $data->isdone;?>"><br>
     <input type="submit" value="UPDATE" class="btn btn-primary btn-block btn-large">
 </form>
-
+<br>
     <form action="index.php?page=accounts&action=logout" method="post">
         <button type="submit" class="btn btn-primary btn-block btn-large">Logout</button>
     </form>
@@ -35,6 +35,7 @@
 
 
 </div>
+</font>
 <script src="js/scripts.js"></script>
 <script>
     function validateForm() {

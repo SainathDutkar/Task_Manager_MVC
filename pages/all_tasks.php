@@ -34,25 +34,29 @@
 </head>
 
 <body>
-
+<center>
 <?php
 //this is how you print something
 $arr = (array)$data;
 if (empty($arr)) {
-    echo "You have no task on your ID, Please create by clicking ADD TASK";
+    echo "<font color='white'><h1>You have no task on your ID, Please create by clicking ADD TASK</h1></font> ";
 }
 else
 {
 print utility\htmlTable::genarateTableFromMultiArray($data);
 }
 ?>
-
-<h1><a href="index.php?page=accounts&action=show" class="btn btn-primary btn-large">View my profile </a></h1>
-<div class="topright"><a href="index.php?page=tasks&action=create" class="btn btn-primary btn-large">Add Task </a></div>
+</center>
+<br>
+<div class="login">
+    <br>
+<h1><a href="index.php?page=accounts&action=show" class="btn btn-primary btn-block btn-large">View my profile </a></h1>
+<div class="topright"><a href="index.php?page=tasks&action=create" class="btn btn-primary btn-block btn-large">Add Task </a></div>
 <br>
 <form action="index.php?page=accounts&action=logout" method="post">
-    <button type="submit" class="btn btn-primary btn-large">Logout</button>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Logout</button>
 </form>
+</div>
 <script src="js/scripts.js"></script>
 </body>
 </html>

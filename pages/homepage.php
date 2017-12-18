@@ -26,6 +26,7 @@
 <h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
 <h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
 -->
+<font color="white">
 <div class="login">
 <form action="index.php?page=accounts&action=login" method="POST">
 
@@ -44,7 +45,7 @@
         <button type="submit" class="btn btn-primary btn-block btn-large">Register</button>
     </form>
 </div>
-
+</font>
 
 
 <!--<form action="index.php?page=tasks&action=delete&id=<?php /*$data['id'] */?> " method="post" id="form1">

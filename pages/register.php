@@ -7,6 +7,7 @@
     <title>The HTML5 Herald</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="styleSheet.css">
 
     <link rel="stylesheet" href="css/styles.css?v=1.0">
 
@@ -16,8 +17,8 @@
 </head>
 
 <body>
-
-
+<font color="white">
+<div class="login">
 <form name="accountDetail" action="index.php?page=accounts&action=register" onsubmit="return validateForm()" method="post">
     First name: <input type="text" name="fname" required><br>
     Last name: <input type="text" name="lname" required><br>
@@ -26,9 +27,10 @@
     Birthday: <input type="text" name="birthday"><br>
     Gender: <input type="text" name="gender"><br>
     Password: <input type="password" name="password" minlength="6"><br>
-    <input type="submit" value="Register User">
+    <input type="submit" value="Register User" class="btn btn-primary btn-block btn-large">
 </form>
-
+</div>
+</font>
 <script>
     function validateForm() {
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;

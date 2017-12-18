@@ -13,16 +13,31 @@
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 75%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even){background-color: #f2f2f2}
+        tr:nth-child(odd){background-color: #c7cfdb}
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+
+
+
 </head>
 
 <body>
-<div class="login">
-<!--
-<h1>Email: <?php echo $data->email; ?></h1>
-<h1>First Name: <?php echo $data->fname; ?></h1>
-<h1>Last Name: <?php echo $data->lname; ?></h1>
--->
-
+<br><br>
+<center>
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
 //print_r($data);
@@ -30,7 +45,8 @@
 print utility\htmlTable::generateTableFromOneRecord($data);
 
 ?>
-
+</center>
+<div class="login">
 <form action="index.php?page=accounts&action=edit&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete" class="btn btn-primary btn-block btn-large">Edit</button>
 </form>
