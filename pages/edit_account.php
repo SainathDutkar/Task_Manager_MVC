@@ -34,11 +34,11 @@
 ?>
 <font color="white">
 <div class="login">
-<form name="accountDetail" action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" onsubmit="return validateForm()" method="post">
+<form name="accountDetail" action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" onsubmit="return validationforForm()" method="post">
 
     First name: <input type="text" name="fname" value="<?php echo $data->fname; ?>" required><br>
     Last name: <input type="text" name="lname" value="<?php echo $data->lname; ?>" required><br>
-    Email: <input type="text" name="email" value="<?php echo $data->email; ?>"><br>
+    Email: <input type="text" name="email" value="<?php echo $data->email; ?> " required><br>
     Phone: <input type="text" name="phone" value="<?php echo $data->phone; ?>"><br>
     Birthday: <input type="text" name="birthday" value="<?php echo $data->birthday; ?>"><br>
     Gender: <input type="text" name="gender" value="<?php echo $data->gender; ?>"><br>
@@ -51,20 +51,13 @@
 </form>
 </div>
 </font>
-<!--<form action="index.php?page=accounts&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
-    <button type="submit" form="form1" value="delete">Delete</button>
-</form>
--->
-
-<script src="js/scripts.js"></script>
-
 <script>
-    function validateForm() {
+    function validationforForm() {
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         var firstname = document.forms["accountDetail"]["fname"].value;
         var lastName = document.forms["accountDetail"]["lname"].value;
         var email = document.forms["accountDetail"]["email"].value;
-        var password = document.forms["accountDetail"]["password"].value;
+        //var password = document.forms["accountDetail"]["password"].value;
 
         var alertmessage = "";
 
@@ -85,5 +78,7 @@
 
     }
 </script>
+
+<script src="js/scripts.js"></script>
 </body>
 </html>

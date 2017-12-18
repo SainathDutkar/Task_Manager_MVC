@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-
+    <link rel="stylesheet" href="styleSheet.css">
     <title>The HTML5 Herald</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
@@ -16,9 +16,9 @@
 </head>
 
 <body>
-
+<font color="white">
 <h1>Page Not Found 404</h1>
-
+</font>
 
 <script src="js/scripts.js"></script>
 </body>
