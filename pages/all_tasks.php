@@ -34,7 +34,8 @@
 </head>
 
 <body>
-<br><br>
+<font color="white"><h5>Sainath Dutkar (sgd23)</h5></font>
+<br>
 <center>
 <?php
 //this is how you print something
@@ -49,7 +50,7 @@ print utility\htmlTable::genarateTableFromMultiArray($data);
 ?>
 </center>
 <br>
-<div class="login">
+<div class="loginAllTask">
     <br>
 <h1><a href="index.php?page=accounts&action=show" class="btn btn-primary btn-block btn-large">View my profile </a></h1>
 <div class="topright"><a href="index.php?page=tasks&action=create" class="btn btn-primary btn-block btn-large">Add Task </a></div>

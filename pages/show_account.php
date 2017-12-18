@@ -36,6 +36,7 @@
 </head>
 
 <body>
+<font color="white"><h5>Sainath Dutkar (sgd23)</h5></font>
 <br><br>
 <center>
 <?php
@@ -47,7 +48,7 @@ print utility\htmlTable::generateTableFromOneRecord($data);
 ?>
 </center>
 <font color="white">
-<div class="login">
+<div class="loginAllTask">
 <form action="index.php?page=accounts&action=edit&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete" class="btn btn-primary btn-block btn-large">Edit</button>
 </form>

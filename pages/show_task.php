@@ -36,6 +36,7 @@
 </head>
 
 <body>
+<font color="white"><h5>Sainath Dutkar (sgd23)</h5></font>
 <center>
     <br><br>
     <?php
@@ -46,7 +47,7 @@ print utility\htmlTable::generateTableFromOneRecord($data);
 ?>
 </center>
 <br>
-<div class="login">
+<div class="loginAllTask">
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete" class="btn btn-primary btn-block btn-large">Delete Task</button>
 </form>

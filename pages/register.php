@@ -17,6 +17,7 @@
 </head>
 
 <body>
+<font color="white"><h5>Sainath Dutkar (sgd23)</h5></font>
 <font color="white">
 <div class="login">
 <form name="accountDetail" action="index.php?page=accounts&action=register" onsubmit="return validateForm()" method="post">
