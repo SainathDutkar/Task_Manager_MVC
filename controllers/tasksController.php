@@ -97,7 +97,6 @@ class tasksController extends http\controller
         $record->message=$_POST['message'];
         $record->isdone=$_POST['isdone'];
         $record->save();
-        echo "done";
         session_start();
         header('Location: index.php?page=tasks&action=all&id='.$_SESSION["userID"]);
       //  self::getTemplate('index.php?page=tasks&action=all');

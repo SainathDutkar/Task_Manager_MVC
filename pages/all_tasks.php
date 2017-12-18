@@ -13,10 +13,28 @@
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 75%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even){background-color: #f2f2f2}
+        tr:nth-child(odd){background-color: #c7cfdb}
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+
 </head>
 
 <body>
-<font color="white">
+
 <?php
 //this is how you print something
 $arr = (array)$data;
@@ -28,9 +46,10 @@ else
 print utility\htmlTable::genarateTableFromMultiArray($data);
 }
 ?>
-<h1><a href="index.php?page=accounts&action=show">View my profile </a></h1>
-<h1><a href="index.php?page=tasks&action=create">Add Task </a></h1>
-</font>
+
+<h1><a href="index.php?page=accounts&action=show" class="btn btn-primary btn-large">View my profile </a></h1>
+<h1><a href="index.php?page=tasks&action=create" class="btn btn-primary btn-large">Add Task </a></h1>
+
 <script src="js/scripts.js"></script>
 </body>
 </html>

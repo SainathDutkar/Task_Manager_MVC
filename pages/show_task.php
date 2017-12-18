@@ -20,13 +20,14 @@
 
 <body>
 <font color="white">
-<?php
+    <div class="login">
+    <?php
 //this is how you print something  $data contains the record that was selected on the table.
 
 print utility\htmlTable::generateTableFromOneRecord($data);
 //print_r($data);
 ?>
-<div class="login">
+
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete" class="btn btn-primary btn-block btn-large">Delete</button>
 </form>

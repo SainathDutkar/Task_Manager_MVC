@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styleSheet.css">
 
     <title>The HTML5 Herald</title>
     <meta name="description" content="The HTML5 Herald">
@@ -16,6 +17,7 @@
 </head>
 
 <body>
+<div class="login">
 <!--
 <h1>Email: <?php echo $data->email; ?></h1>
 <h1>First Name: <?php echo $data->fname; ?></h1>
@@ -46,7 +48,7 @@
 <form action="index.php?page=accounts&action=logout" method="post">
     <button type="submit">Logout</button>
 </form>
-
+</div>
 <!--<form action="index.php?page=accounts&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>

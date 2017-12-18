@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styleSheet.css">
 
     <title>The HTML5 Herald</title>
     <meta name="description" content="The HTML5 Herald">
@@ -16,19 +17,19 @@
 </head>
 
 <body>
-
-
+<font color="white">
+<div class="login">
 <form name="updateTask" action="index.php?page=tasks&action=addtask" onsubmit="return validateForm()" method="POST">
     Owner email: <input type="text" name="owneremail" required><br>
     Created date: <input type="text" name="cdate" required><br>
-    due date: <input type="text" name="ddate" required><br>
-    message: <input type="text" name="message" required><br>
-    isdone: <input type="text" name="isdone"><br>
-    <button type="submit">Add Task</button>
+    Due date: <input type="text" name="ddate" required><br>
+    Message: <input type="text" name="message" required><br>
+    IS Done: <input type="text" name="isdone"><br>
+    <button type="submit" class="btn btn-primary btn-large">Add Task</button>
 </form>
 
-
-
+</div>
+</font>
     
 <script src="js/scripts.js"></script>
 <script>

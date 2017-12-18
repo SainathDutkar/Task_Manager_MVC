@@ -23,7 +23,7 @@ abstract class collection
     {
         $tableName = get_called_class();
         $sql = 'SELECT * FROM ' . $tableName.' where ownerid='.$userId;
-        echo $sql;
+       // echo $sql;
         return self::getResults($sql);
     }
 
