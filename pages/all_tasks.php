@@ -3,12 +3,12 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-
-    <title>The HTML5 Herald</title>
+    <link rel="stylesheet" href="styleSheet.css">
+    <title>WSD MVC PROJECT</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <!--  <link rel="stylesheet" href="css/styles.css?v=1.0">
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -16,10 +16,9 @@
 </head>
 
 <body>
-
+<font color="white">
 <?php
 //this is how you print something
-
 $arr = (array)$data;
 if (empty($arr)) {
     echo "You have no task on your ID, Please create by clicking ADD TASK";
@@ -28,12 +27,10 @@ else
 {
 print utility\htmlTable::genarateTableFromMultiArray($data);
 }
-
 ?>
-
 <h1><a href="index.php?page=accounts&action=show">View my profile </a></h1>
 <h1><a href="index.php?page=tasks&action=create">Add Task </a></h1>
-
+</font>
 <script src="js/scripts.js"></script>
 </body>
 </html>

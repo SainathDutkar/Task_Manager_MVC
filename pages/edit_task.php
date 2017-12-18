@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-
+    <link rel="stylesheet" href="styleSheet.css">
     <title>The HTML5 Herald</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
@@ -17,7 +17,7 @@
 
 <body>
 
-
+<div class="login">
 <form name="updateTask" action="index.php?page=tasks&action=updatetask&id=<?php echo $data->id; ?>" onsubmit="return validateForm()" method="POST">
     Owner email: <input type="text" name="owneremail" value="<?php echo $data->owneremail;?>"><br>
     Owner id: <input type="text" name="ownerid" value="<?php echo $data->ownerid;?>" readonly><br>
@@ -25,9 +25,9 @@
     due date: <input type="text" name="ddate" value="<?php echo $data->duedate;?>" readonly><br>
     message: <input type="text" name="message" value="<?php echo $data->message;?>" required><br>
     isdone: <input type="text" name="isdone" value="<?php echo $data->isdone;?>"><br>
-    <input type="submit" value="UPDATE">
+    <input type="submit" value="UPDATE" class="btn btn-primary btn-block btn-large">
 </form>
-
+</div>
 <script src="js/scripts.js"></script>
 <script>
     function validateForm() {

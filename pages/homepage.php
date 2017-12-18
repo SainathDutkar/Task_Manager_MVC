@@ -2,9 +2,13 @@
 
 <html lang="en">
 <head>
+
+    <link rel="stylesheet" href="styleSheet.css">
+
+
     <meta charset="utf-8">
 
-    <title>The HTML5 Herald</title>
+    <title>WSD FINAL PROJECT</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
@@ -18,40 +22,30 @@
 <body>
 
 
-<h1>
-    <?php
-
-    //this how to print some data;
-    echo $data['site_name'];
-
-    ?> </h1>
-
+<!--
 <h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
 <h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
-
+-->
+<div class="login">
 <form action="index.php?page=accounts&action=login" method="POST">
 
-    <div class="container">
+   <!-- <div class="container"> -->
         <label><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="email" required>
 
         <label><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" required>
 
-        <button type="submit">Login</button>
-    </div>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+    <BR>
+  </form>
+
+    <form action="index.php?page=accounts&action=registerUser" method="post">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Register</button>
+    </form>
+</div>
 
 
-</form>
-<form action="index.php?page=accounts&action=registerUser" method="post">
-
-    <div class="container">
-        <button type="submit">Register</button>
-    </div>
-
-
-</form>
-<h1><a href="index.php?page=accounts&action=register">Register</a></h1>
 
 <!--<form action="index.php?page=tasks&action=delete&id=<?php /*$data['id'] */?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
